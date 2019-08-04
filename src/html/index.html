@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="wrapper-all">
+    <div class="sticky">
+        <div class="sticky-item sticky-item_counter">
+            <div class="sticky-item__header-text">Counter</div>
+            <div class="sticky-item__wrapper sticky-item__wrapper_cnt">
+                <div class="sticky-item__block-header">All \ Show</div>
+                <div class="sticky-item__wrapper-block sticky-item__wrapper-block_cnts">
+                    <div class="sticky-item__block_cnt element-cnt_all"></div>
+                    <div class="sticky-item__block_cnt dividing-line">\</div>
+                    <div class="sticky-item__block_cnt element-cnt_show"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-item sticky-item_search-wrapper">
+            <form class="sticky-item_search">
+                <label for="searchField">Search</label>
+                <input type="text" name="searchField" id="searchField" class="form-control" placeholder="Search...">
+            </form>
+            <button id="change-status1" class="btn btn-dark">Hide menu</button>
+        </div>
+        <div class="sticky-sticky_filter">
+            <div class="sticky-item">
+                <div class="sticky-item__header-text">Filters</div>
+                <div class="sticky-item__wrapper">
+                    <div class="sticky-item__wrapper-block">
+                        <div class="sticky-item__block-header">by status:</div>
+                        <form class="sticky-item__block-form">
+                            <div class="sticky-item__block-form-radio">
+                                <label for="draft">Draft</label>
+                                <input type="radio" class="global-filter" name="radio" value="&status=0" id="draft">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="active">Active</label>
+                                <input type="radio" class="global-filter" name="radio" value="&status=1" id="active">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="finished">Finished</label>
+                                <input type="radio" class="global-filter" name="radio" value="&status=2" id="finished">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="archive">Archive</label>
+                                <input type="radio" class="global-filter" name="radio" value="&status=3" id="archive">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="archive">Canceled</label>
+                                <input type="radio" class="global-filter" name="radio" value="&status=4" id="canceled">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="all">All</label>
+                                <input type="radio" class="global-filter" name="radio" value="all" id="all" checked>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sticky-item__wrapper-block">
+                        <div class="sticky-item__block-header">by public:</div>
+                        <form class="sticky-item__block-form">
+                            <div class="sticky-item__block-form-radio">
+                                <label for="public">Public</label>
+                                <input type="radio" class="global-filter" name="radio" value="&isPublic=true" id="public">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="private">Private</label>
+                                <input type="radio" class="global-filter" name="radio" value="&isPublic=false" id="private">
+                            </div>
+                            <div class="sticky-item__block-form-radio">
+                                <label for="all-projects">All</label>
+                                <input type="radio" class="global-filter" name="radio" value="all-projects"
+                                       id="all-projects"
+                                       checked>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-item sticky-item_button">
+            <div class="sticky-item__header-text">Apply changes</div>
+            <div class="sticky-item__wrapper sticky-item__wrapper_button">
+                <button id="change-status" class="btn btn-dark" disabled>Save change</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive-sm">
+        <div class="table-responsive-sm-wrapper">
+            <table class="items-list-wrapper table">
+                <tbody id="items-list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="error-message">
+        Sorry!!! :( No data to display
+    </div>
+    <div class="pagination-main">
+        <div class="pagination-list-wrapper">
+            <ul id="pagination-list" class="pagination">
+            </ul>
+        </div>
+        <!--<input type="text" class="form-control search-page-number">-->
+        <div class="input-group mb-3" id="search-page-number">
+            <input type="number" class="form-control search-page-number_value" placeholder="Enter page number" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="search-page-number btn btn-outline-secondary btn btn-dark" type="button">Go</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>Warning!</h2>
+        <div class="content">
+            Are you sure you want to make changes?
+        </div>
+        <button type="button" class="popup-btn btn btn-danger" id="change-status-close">Close</button>
+        <button type="button" class="popup-btn btn btn-success" id="change-status-send">Success</button>
+    </div>
+</div>
+<script src="./js/jsLibs.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
