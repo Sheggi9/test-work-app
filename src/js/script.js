@@ -441,7 +441,7 @@ $(document).ready(function() {
     }
     const lastPage = numPage.replace(
       /(page=)[0-9]*/gi,
-      'page=' + data.totalPages,
+      'page=' + data.totalPages
     );
 
     function getShowItems(callback) {
@@ -480,7 +480,7 @@ $(document).ready(function() {
     const itemsWithoutLastPage = data.projects.length * (data.totalPages - 1);
     const lastPage = numPage.replace(
       /(page=)[0-9]*/gi,
-      'page=' + data.totalPages,
+      'page=' + data.totalPages
     );
 
     function getShowAllItems(callback) {
@@ -610,7 +610,7 @@ $(document).ready(function() {
       });
     });
     let currentPagination = parseInt(
-      $('.pagination-list__element.page-item.active').attr('data-index'),
+      $('.pagination-list__element.page-item.active').attr('data-index')
     );
     currentPagination += 1;
     setActivePage(currentPagination);
