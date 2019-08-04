@@ -76,6 +76,7 @@ function watchFiles() {
   watch('src/scss/*.scss', series(css));
   watch('src/html/index.html', series(html));
   watch('src/js/*.js', series(js));
+  watch('src/img/*', series(images));
 }
 
 const startWatch = parallel(watchFiles, server);
@@ -87,4 +88,5 @@ exports.html = html;
 exports.css = css;
 exports.watch = watchFiles;
 exports.server = server;
+exports.build = parallel(html, css, js, jsLibs, images);
 exports.default = series(parallel(html, css, js, jsLibs, images), startWatch);

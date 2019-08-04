@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "dev": "gulp",
+    "build": "gulp build",
     "lint": "eslint --ext .js src",
     "lintFix": "eslint --fix --ext .js src",
     "prettier": "prettier --write \"src/**/*.js\""
@@ -24,7 +25,6 @@
     "gulp-prettier": "^2.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1"
   },
@@ -33,7 +33,7 @@
     "jquery": "^3.4.1"
   },
   "browserslist": [
-    "last 10 version"
+    "last 3 version"
   ],
   "husky": {
     "hooks": {
