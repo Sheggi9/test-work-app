@@ -68,12 +68,6 @@
   align-items: center;
 }
 
-.items-list__element.changed{
-  background: url(../img/changed.png);
-  background-size: auto;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-}
 
 .save-change-all{
   display: none;
@@ -258,9 +252,7 @@ label{
   flex-wrap: nowrap;
 }
 
-.items-list__element.changed {
-  filter: opacity(0.5);
-}
+
 
 .sticky-item_search-wrapper{
   flex-direction: row;
@@ -314,9 +306,26 @@ tr.items-list__element:hover .items-list__element-text_title-mobile {
   transition: font-weight 0.1s ease-out;
   font-weight: 600;
 }
+.items-list__element.changed {
 
-.items-list__element-text_title-mobile{}
-
+}
+.items-list__element.changed {
+  filter: opacity(.5);
+  background: url(../img/changed.png);
+  background-size: 33%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size .2s linear;
+}
+.items-list__element.changed:hover {
+  filter: opacity(.5);
+  background: url(../img/changed.png);
+  background-size: 34%;
+  max-height: 160px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s linear;
+}
 
 
 input{
@@ -424,12 +433,7 @@ button.popup-btn.btn {
   margin: 2%;
 }
 
-.items-list__element.changed {
-  background: url(../img/changed.png);
-  background-size: 60%;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-}
+
 
 .sticky-item__body-items.sticky-item__body-items_filter {
   align-self: flex-start;
@@ -442,18 +446,27 @@ button.popup-btn.btn {
 ::-webkit-scrollbar-corner { background-color: #999;}
 ::-webkit-resizer { background-color: #666;}
 
+@media (min-width: 1800px) {
+  .items-list__element.changed {
+    background-size: auto;
+  }
+  .items-list__element.changed:hover {
+    background-size: auto;
+  }
+}
 @media (max-width: 1100px) {
   .items-list__element.changed {
     background: url(../img/changed.png);
     background-size: 33%;
     background-position: left bottom;
     background-repeat: no-repeat;
+    transition: background-size .2s linear;
   }
 }
 @media (max-width: 800px) {
   .items-list__element.changed {
     background: url(../img/changed.png);
-    background-size: 60%;
+    background-size: 33%;
     background-position: left bottom;
     background-repeat: no-repeat;
   }
@@ -470,7 +483,7 @@ button.popup-btn.btn {
   }
   .items-list__element.changed {
     background: url(../img/changed.png);
-    background-size: 60%;
+    background-size: 33%;
     background-position: left bottom;
     background-repeat: no-repeat;
   }
