@@ -13,67 +13,67 @@
     <div class="sticky">
         <div class="sticky-item sticky-item_counter">
             <div class="sticky-item__header-text">Counter</div>
-            <div class="sticky-item__wrapper sticky-item__wrapper_cnt">
-                <div class="sticky-item__block-header">All \ Show</div>
-                <div class="sticky-item__wrapper-block sticky-item__wrapper-block_cnts">
-                    <div class="sticky-item__block_cnt element-cnt_all"></div>
-                    <div class="sticky-item__block_cnt dividing-line">\</div>
-                    <div class="sticky-item__block_cnt element-cnt_show"></div>
+            <div class="sticky-item__body sticky-item__body_cnt">
+                <div class="sticky-item__body-title">All \ Show</div>
+                <div class="sticky-item__body-items sticky-item__body-items_cnts">
+                    <div class="sticky-item__body-item_cnt element-cnt_all"></div>
+                    <div class="sticky-item__body-item_cnt dividing-line">\</div>
+                    <div class="sticky-item__body-item_cnt element-cnt_show"></div>
                 </div>
             </div>
         </div>
         <div class="sticky-item sticky-item_search-wrapper">
             <form class="sticky-item_search">
-                <label for="searchField">Search</label>
-                <input type="text" name="searchField" id="searchField" class="form-control" placeholder="Search...">
+                <label for="search-field">Search</label>
+                <input type="text" name="search-field" id="search-field" class="form-control" placeholder="Search...">
             </form>
-            <button id="change-status1" class="btn btn-dark">Hide menu</button>
+            <button id="show-hide-filter-button" class="btn btn-dark">Hide menu</button>
         </div>
         <div class="sticky-sticky_filter">
             <div class="sticky-item">
                 <div class="sticky-item__header-text">Filters</div>
-                <div class="sticky-item__wrapper">
-                    <div class="sticky-item__wrapper-block sticky-item__wrapper-block_filter">
-                        <div class="sticky-item__block-header">by status:</div>
-                        <form class="sticky-item__block-form">
-                            <div class="sticky-item__block-form-radio">
+                <div class="sticky-item__body">
+                    <div class="sticky-item__body-items sticky-item__body-items_filter">
+                        <div class="sticky-item__body-title">by status:</div>
+                        <form class="sticky-item__body-item-form">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="draft">Draft</label>
                                 <input type="radio" class="global-filter" name="radio" value="&status=0" id="draft">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="active">Active</label>
                                 <input type="radio" class="global-filter" name="radio" value="&status=1" id="active">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="finished">Finished</label>
                                 <input type="radio" class="global-filter" name="radio" value="&status=2" id="finished">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="archive">Archive</label>
                                 <input type="radio" class="global-filter" name="radio" value="&status=3" id="archive">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="archive">Canceled</label>
                                 <input type="radio" class="global-filter" name="radio" value="&status=4" id="canceled">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="all">All</label>
                                 <input type="radio" class="global-filter" name="radio" value="all" id="all" checked>
                             </div>
                         </form>
                     </div>
-                    <div class="sticky-item__wrapper-block sticky-item__wrapper-block_filter">
-                        <div class="sticky-item__block-header">by public:</div>
-                        <form class="sticky-item__block-form">
-                            <div class="sticky-item__block-form-radio">
+                    <div class="sticky-item__body-items sticky-item__body-items_filter">
+                        <div class="sticky-item__body-title">by public:</div>
+                        <form class="sticky-item__body-item-form">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="public">Public</label>
                                 <input type="radio" class="global-filter" name="radio" value="&isPublic=true" id="public">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="private">Private</label>
                                 <input type="radio" class="global-filter" name="radio" value="&isPublic=false" id="private">
                             </div>
-                            <div class="sticky-item__block-form-radio">
+                            <div class="sticky-item__body-item-form-radio">
                                 <label for="all-projects">All</label>
                                 <input type="radio" class="global-filter" name="radio" value="all-projects"
                                        id="all-projects"
@@ -86,7 +86,7 @@
         </div>
         <div class="sticky-item sticky-item_button">
             <div class="sticky-item__header-text">Apply changes</div>
-            <div class="sticky-item__wrapper sticky-item__wrapper_button">
+            <div class="sticky-item__body sticky-item__body_button">
                 <button id="change-status" class="btn btn-dark" disabled>Save change</button>
             </div>
         </div>

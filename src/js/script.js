@@ -505,12 +505,12 @@ $(document).ready(function() {
     $('.element-cnt_all').text(items);
   }
 
-  $('#searchField').keypress(function(e) {
+  $('#search-field').keypress(function(e) {
     if (e.key === 'Enter') {
       e.preventDefault();
     }
   });
-  $('#searchField').on('input', function(event) {
+  $('#search-field').on('input', function(event) {
     const parentDomEl = $('#pagination-list');
     const page = parentDomEl
       .find('li.active')
@@ -632,7 +632,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#change-status1').click(function() {
+  $('#show-hide-filter-button').click(function() {
     const filterBlock = $('.sticky-sticky_filter');
     const counterBlock = $('.sticky-item_counter');
     if (filterBlock.is(':visible')) {
