@@ -41,6 +41,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   height: 40px;
+  align-items: center;
 }
 .pagination-list__element{
   display: flex;
@@ -106,6 +107,8 @@
 .pagination-main{
   display: flex;
   background-color: #212529;
+  justify-content: center;
+  height: 40px;
 }
 
 .pagination{
@@ -117,6 +120,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 40px;
+}
+
+.input-group-append,.search-page-number,.mb-3,.page-item{
+  background: #000 !important;
 }
 
 .page-item.active .page-link {
@@ -278,14 +286,17 @@ label{
 
 .table-responsive-sm-wrapper {
   overflow-y: scroll;
+  //overflow-x: hidden;
   height: 100%;
 }
+
 
 .items-list__element{
   z-index: 4;
   cursor: pointer;
   filter: none;
   transition: filter 0.1s ease-out;
+  width: 100vw;
 }
 
 tr.items-list__element:hover {
@@ -315,7 +326,7 @@ tr.items-list__element:hover .items-list__element-text_title-mobile {
   background-size: 33%;
   background-position: left bottom;
   background-repeat: no-repeat;
-  transition: background-size .2s linear;
+  //transition: background-size .2s linear;
 }
 .items-list__element.changed:hover {
   filter: opacity(.5);
@@ -324,7 +335,7 @@ tr.items-list__element:hover .items-list__element-text_title-mobile {
   max-height: 160px;
   background-position: left bottom;
   background-repeat: no-repeat;
-  transition: background-size 0.2s linear;
+  //transition: background-size 0.2s linear;
 }
 
 
@@ -439,6 +450,10 @@ button.popup-btn.btn {
   align-self: flex-start;
 }
 
+.sticky-item__body_filter{
+  height: 100%;
+}
+
 ::-webkit-scrollbar-button {  background-color: #666; }
 ::-webkit-scrollbar-track {  background-color: #999;}
 ::-webkit-scrollbar-track-piece { background-color: #ffffff;}
@@ -446,12 +461,71 @@ button.popup-btn.btn {
 ::-webkit-scrollbar-corner { background-color: #999;}
 ::-webkit-resizer { background-color: #666;}
 
-@media (min-width: 1800px) {
+@media (min-width: 1900px) {
   .items-list__element.changed {
     background-size: auto;
   }
   .items-list__element.changed:hover {
     background-size: auto;
+  }
+  body,button,input{
+    font-size: 2rem !important;
+  }
+  input{
+    height: 2rem;
+    width: 2rem;
+  }
+  #pagination-list{
+    height: 100%;
+  }
+  .pagination-list__element-text {
+    height: 92%;
+    width: 100%;
+  }
+  .pagination-list__element {
+    width: 5rem;
+    height: 5rem;
+  }
+  .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control {
+    height: 92%;
+  }
+  .input-group>.input-group-append>.btn {
+    height: 5rem;
+    width: 5rem;
+  }
+  button#show-hide-filter-button {
+    height: 4rem;
+    margin-top: 3rem;
+    margin-left: 15px;
+    white-space: nowrap;
+  }
+  .form-control {
+    height: 4rem;
+  }
+  .page-item:first-child .page-link {
+    border-top-left-radius: 0.75rem !important;
+    border-bottom-left-radius: 0.75rem !important;
+
+  }
+  .page-item:last-child .page-link {
+    border-top-right-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
+  }
+  .pagination-main{
+    height: 5rem;
+  }
+  #search-page-number {
+    height: 5rem;
+  }
+
+}
+@media (max-width: 1024px) {
+  .wrapper-all{
+    //height: calc(100vh - 88px);
+    height: 100vh;
+  }
+  .items-list__element.changed > .form-set-status{
+    background: #fff;
   }
 }
 @media (max-width: 1100px) {
@@ -460,7 +534,7 @@ button.popup-btn.btn {
     background-size: 33%;
     background-position: left bottom;
     background-repeat: no-repeat;
-    transition: background-size .2s linear;
+    //transition: background-size .2s linear;
   }
 }
 @media (max-width: 800px) {
@@ -491,8 +565,11 @@ button.popup-btn.btn {
   .sticky {
     transition: all 5s ease-in-out;
   }
+
+
   .sticky-item {
     width: 100%;
+    //background: #000;
   }
   .sticky-item__body_cnt {
     align-items: center;
@@ -509,6 +586,16 @@ button.popup-btn.btn {
     overflow: overlay;
     text-overflow: ellipsis;
   }
+  .items-list__element{
+    overflow-x: scroll;
+  }
+  .sticky-item__header-text{
+    display: none;
+  }
+  .sticky {
+    display: block;
+  }
+
 }
 
 

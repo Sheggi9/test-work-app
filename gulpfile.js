@@ -7,12 +7,14 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const notify = require('gulp-notify');
 const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify-es').default;
 
 function server() {
   browserSync.init({
     server: {
       baseDir: './build/',
     },
+    tunnel: true,
   });
   browserSync.watch('build', browserSync.reload);
 }
@@ -48,6 +50,10 @@ function css() {
 function js() {
   return src('src/js/*.js', { sourcemaps: true })
     .pipe(concat('script.js'))
+    .pipe(uglify())
+    .on('error', function(err) {
+      gutil.log(gutil.colors.red('[Error]'), err.toString());
+    })
     .pipe(dest('build/js', { sourcemaps: true }));
 }
 
